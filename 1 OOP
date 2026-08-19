@@ -1,0 +1,45 @@
+1. OOP
+
+
+public class Car {
+    String brand;
+    String model;
+    int year;
+
+
+    Car (String brand, String model, int year) {
+
+        this.brand = brand;
+        this.model = model;
+        this.year = year;
+    }
+             
+    void displayinfo () {
+
+        System.out.println("\nbrand: " + brand);
+        System.out.println("model: " + model);
+        System.out.println("year: " + year);
+    }
+
+
+}
+
+
+public class Main{
+    public static void main(String[] args) throws Exception {
+        
+
+        Car c1 = new Car("toyota", " vios", 2023);
+        Car c2 = new Car("honda", "Civic", 2022);
+        Car c3 = new Car("Ford", "Ranger", 2024);
+        Car c4 = new Car("Mitsubishi", "Montero", 2021);
+
+
+        c1.displayinfo();
+        c2.displayinfo();
+        c3.displayinfo();
+        c4.displayinfo();
+
+
+    }
+}
