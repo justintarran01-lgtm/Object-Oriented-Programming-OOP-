@@ -1,0 +1,53 @@
+5.  ENCAPSULATION AND DATA HIDING
+
+
+public class GameCharacter {
+
+    private String name;
+    private int level;
+
+
+    public GameCharacter (String name, int level) {
+        this.name = name;
+        this.level = level;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name){
+
+        this.name = name;
+    }
+
+    public int getLevel() {
+        return level;
+    }
+
+    public void setLevel (int level) {
+        if (level >= 0) {
+
+            this.level = level;
+        }
+    }
+
+
+}
+
+
+
+public class App {
+    public static void main(String[] args) throws Exception {
+
+     GameCharacter p1 = new GameCharacter("knight ", 10);
+
+     p1.setLevel(-3);
+
+     System.out.println(p1.getName() + "level: " + p1.getLevel());
+         
+
+        
+    }
+}
+
