@@ -1,0 +1,54 @@
+1. ENCAPSULATION AND DATA HIDING
+ 
+public class Student {
+
+    private String name;
+    private int age;
+
+
+    public String getName() {
+
+        return name;
+    }
+
+    public void setName(String name) {
+
+        this.name = name;
+    }
+
+    public int getAge() {
+        return age;
+
+    }
+
+    public void setAge(int age) {
+
+if (age >= 0 ) {
+
+        this.age = age;
+    }
+
+}
+
+
+}
+
+
+
+
+public class App {
+    public static void main(String[] args) throws Exception {
+
+
+        Student Student1 = new Student();
+
+        Student1.setName("john");
+        Student1.setAge(-5);
+
+        System.out.println(Student1.getName());
+        System.out.println(Student1.getAge());
+
+
+        
+    }
+}
