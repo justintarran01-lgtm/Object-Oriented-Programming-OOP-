@@ -1,0 +1,53 @@
+5. INHERITANCE
+
+public class Employee {
+    String name;
+    int salary;
+
+    public Employee(String name, int salary) {
+        this.name = name;
+        this.salary = salary;
+    }
+
+    public void work() {
+        System.out.println( name + " is working");
+
+
+    }
+
+    public void pay() {
+        System.out.println(name + " have salary of " + salary);
+    }
+}       
+
+
+
+public class Manager extends Employee {
+    String department;
+
+    public Manager(String name, int salary, String department) {
+        super(name, salary);
+        this.department = department;
+    }
+
+    public void manager(){
+        System.out.println(name + " is working in  " + department + " Department");
+    }
+}
+
+
+
+
+
+
+
+public class App {
+    public static void main(String[] args) throws Exception {
+        
+       Manager m1 = new Manager("justin", 500000, "IT");
+
+       m1.work();
+       m1.manager();
+       m1.pay();
+    }
+}
