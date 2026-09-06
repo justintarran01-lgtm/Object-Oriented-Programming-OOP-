@@ -1,0 +1,133 @@
+1. OVERRIDE
+
+
+public class Animal {
+    String name;
+    int age;
+    String color;
+
+
+    public Animal(String name, int age, String color) {
+        this.name = name;
+        this.age = age;
+        this.color = color;
+    }
+
+    public void sound(){
+        System.out.println("im animal");
+    }
+
+    public void eat(){
+        System.out.println("im eating");
+    }
+
+    public void sleep(){
+        System.out.println("im sleeping");
+    }
+
+    public void bite() {
+        System.out.println("im biting");
+    }
+  
+    
+}
+
+
+public class Cat extends Animal {
+    String indor;
+    int furLength;
+    int livesleft;
+
+    public Cat(String name, int age, String color, String indor, int furLength, int livesleft){
+        super(name, age, color);
+        this.indor = indor;
+        this.furLength = furLength;
+        this.livesleft = livesleft;
+
+       
+    }
+
+    @Override
+    public void sound(){
+        System.out.println("meow meow my name is " + name);
+    }
+
+    public void introduce(){
+        System.out.println("im " + age + " years old and my color is " + color + " i live from " + indor);
+    }
+
+    @Override
+    public void sleep(){
+        System.out.println("im sleeping on my bed");
+    }
+
+    @Override
+    public void eat(){
+        System.out.println("im eating a shawrama");
+    }
+    
+    @Override
+    public void bite(){
+        System.out.println("im gonna bite my tintin");
+    }
+
+}
+
+
+public class Pig extends Animal {
+    int weight;
+    String farmname;
+    String mudlover;
+
+    public Pig(String name, int age, String color, int weight, String farmname, String mudlover){
+        super(name, age, color);
+        this.weight = weight;
+        this.farmname = farmname;
+        this.mudlover = mudlover;
+    }
+
+    public void introduce(){
+        System.out.println("hello my name is " + name + " and im " + 15 + " years old, my color are " + color);
+    }
+}
+
+
+public class Dog extends Animal {
+  String breed;
+  int traininglevel;
+  String favoritetoy;
+
+  public Dog(String name, int age, String color, String breed, int traininglevel, String favoritetoy) {
+    super(name, age, color);
+    this.breed = breed;
+    this.traininglevel = traininglevel;
+    this.favoritetoy = favoritetoy;
+
+  }
+    
+    
+}
+
+
+public class App {
+    public static void main(String[] args) throws Exception {
+    
+
+        Cat c1 = new Cat("anh", 18, "pink", "inside of house",10, 50);
+        
+        c1.bite();
+        c1.eat();
+        c1.sleep();
+        c1.sound();
+        c1.introduce();
+
+        Pig p1 = new Pig("selena", 15, "white", 40, "selenz", "waterlover");
+         
+        p1.introduce();
+
+      
+    
+        
+
+    }
+}
