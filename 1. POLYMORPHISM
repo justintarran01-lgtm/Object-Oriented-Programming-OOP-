@@ -1,0 +1,113 @@
+public class App { 
+    public static void main(String[] args) throws Exception { 
+        
+ 
+        Animal [] animals = new Animal [4]; 
+ 
+        animals[0] = new Dog(); 
+        animals [1] = new Cat(); 
+        animals[2] = new Dragon(); 
+     
+ 
+ 
+        for (int i = 0; i < animals.length; i++){ 
+ 
+              animals[i].makesound(); 
+ 
+        } 
+       
+         
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+         
+    } 
+} 
+public class Animal { 
+ 
+ 
+    public void makesound(){ 
+        System.out.println("im animal");     
+ 
+    } 
+ 
+    public void eat(){ 
+        System.out.println("im eating"); 
+    } 
+ 
+    public void sleep(){ 
+        System.out.println("im sleeping"); 
+ 
+    } 
+ 
+    public void hunting(){ 
+        System.out.println("im hunting"); 
+    } 
+ 
+     
+ 
+ 
+     
+} 
+public class Dragon extends Animal{ 
+ 
+    public void fire(){ 
+        System.out.println("im firing"); 
+    } 
+ 
+    public void fly(){ 
+        System.out.println("im flying"); 
+    } 
+     
+    @Override 
+    public void makesound(){ 
+        System.out.println("grrrrr"); 
+    } 
+ 
+    @Override 
+    public void eat(){ 
+        System.out.println("im eating human"); 
+    } 
+ 
+    @Override 
+    public void sleep(){ 
+        System.out.println("im sleeping"); 
+    } 
+} 
+public class Lion extends Animal { 
+ 
+    public void imking(){ 
+        System.out.println("im kick of jungle"); 
+    } 
+ 
+    public void strong(){ 
+        System.out.println("im stronger than mufasa"); 
+    } 
+ 
+    @Override 
+    public void hunting(){ 
+        System.out.println("im hunting a deer"); 
+    } 
+     
+}public class Cat extends  Animal{ 
+ 
+ 
+    @Override 
+    public void makesound(){ 
+        System.out.println("meow"); 
+    } 
+     
+} 
+public class Dog extends Animal { 
+     
+ 
+    @Override 
+    public void makesound(){ 
+        System.out.println("im barking"); 
+    } 
+} 
+ what do u think?
