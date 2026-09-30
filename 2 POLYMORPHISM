@@ -1,0 +1,55 @@
+public class App { 
+    public static void main(String[] args) throws Exception { 
+ 
+ 
+        Payment [] p1 = new Payment[3]; 
+ 
+           p1[0] = new Cash(); 
+           p1[1] = new Gcash(); 
+           p1[2] = new Credit(); 
+ 
+ 
+           for (int i = 0; i < p1.length; i++){ 
+ 
+            p1[i].pay(); 
+ 
+ 
+           } 
+ 
+     
+ 
+         
+    } 
+} 
+public class Payment { 
+ 
+    public void pay(){ 
+        System.out.println("processing payment..."); 
+    } 
+     
+} 
+public class Cash extends Payment{ 
+ 
+     
+    @Override 
+    public void pay(){ 
+        System.out.println("Paid with cash"); 
+    } 
+} 
+public class Gcash extends Payment { 
+ 
+ 
+    @Override 
+    public void pay(){ 
+        System.out.println("Paying in gcash"); 
+    } 
+     
+} 
+public class Credit extends  Payment{ 
+ 
+    @Override 
+    public void pay(){ 
+        System.out.println("pay with creditcard"); 
+    } 
+     
+} 
