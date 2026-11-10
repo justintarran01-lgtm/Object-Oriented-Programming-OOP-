@@ -1,0 +1,47 @@
+public class Employee {
+    private String name;
+    private double salary;
+
+
+
+
+    public Employee(String name, double salary){
+        this.name = name;
+        this.salary = salary;
+    }
+
+
+    public String getname(){
+        return name;
+    }
+
+    public double getsalary(){
+        return salary;
+    }
+
+    public void setsalary(double salary){
+        this.salary = salary;
+    }
+
+    public void increasesalary(double amount){
+        this.salary = amount + salary;
+    }
+
+
+}  public class App {
+    public static void main(String[] args) throws Exception {
+
+        Employee m1 = new Employee("justin",15000.0);
+
+
+        System.out.println("Employee: " + m1.getname());
+        System.out.println("Current salary: " + m1.getsalary());
+        m1.increasesalary(2000);
+        System.out.println("Updated salary: " + m1.getsalary());
+    
+        
+
+
+        
+    }
+}
