@@ -1,0 +1,76 @@
+public class Product{
+
+    private String productname;
+    private double price;
+    private int stock;
+    private int quantity;
+    
+    
+    public Product (String productname, double price, int stock, int quantity){
+        this.productname = productname;
+        this.price = price;
+        this.stock = stock;
+        this.quantity = quantity;
+    }
+
+    public String getproductname(){
+        return productname;
+    }
+
+    public double getprice(){
+        return price;
+    }
+
+    public int getstock(){
+        return stock;
+    }
+
+    public void setprice( double price){
+        this.price = price;
+    }
+
+    public void setname( String productname){
+        this.productname = productname;
+    }
+
+    public void setstock( int stock){
+        this.stock = stock;
+    }
+
+    public void sellproduct( int quantity){
+
+        if (quantity <= stock){
+            this.stock = stock - quantity;
+
+        } else {
+            System.out.println("not enough stock");
+        }
+        
+    }
+    
+}  public class App {
+    public static void main(String[] args) throws Exception {
+
+        Product p1 = new Product("keyboard",1200.0,10, 1 );
+
+        System.out.println("Product: " + p1.getproductname());
+        System.out.println("Price: " + p1.getprice());
+        System.out.println("Stock: " + p1.getstock());
+
+        
+
+        System.out.println("Selling 3 keyboards....");
+
+        p1.sellproduct(2);
+
+        System.out.println("Updated Stock: " + p1.getstock());
+
+    
+
+    
+        
+
+
+        
+    }
+}
