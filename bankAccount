@@ -1,0 +1,95 @@
+public class App {
+    public static void main(String[] args) throws Exception {
+
+      
+          SavingsAccount s1 = new SavingsAccount ("justin",1000,10);
+          BankAccount b1 = new BankAccount("justin", 1000);
+
+          b1.info();
+
+          s1.deposit(500);
+          s1.withdraw(200);
+          s1.applyinterest();
+
+          s1.info();
+      
+        
+    }
+}
+
+public class BankAccount{
+    private String owner;
+    private double  balance;
+
+    public BankAccount(String owner, double balace){
+        this.owner = owner;
+        this.balance = balace;
+    }
+
+    public String getowner(){
+        return owner;
+
+    }
+
+    public double getbalance(){
+        return balance;
+    }
+    
+
+    public void deposit(double amount){
+        this.balance = this.balance + amount;
+      System.out.println("\ndepositing: " + amount);
+    }
+
+    public void withdraw(double amount){
+        if (amount <= balance ){
+            this.balance = balance - amount;
+            System.out.println("withdraw: " + amount);
+        } else {
+            System.out.println("your balance its not enough");
+        }
+
+        
+        }
+
+        public void info(){
+            System.out.println("bank account: " + owner);
+            System.out.println("balance: " + balance);
+
+    }
+
+    
+
+}
+
+
+public class SavingsAccount extends BankAccount{
+    private double interestrate;
+
+    public SavingsAccount(String owner, double balance, double interestrate){
+        super(owner,balance);
+        this.interestrate = interestrate;
+    }
+
+    public void applyinterest(){
+        double interest =  getbalance() * (interestrate / 100);
+        deposit(interest);
+        System.out.println("apply " + interestrate +"% only");
+
+    }   
+
+
+    @Override
+    public void info(){
+        System.out.println("\nOwner: " + getowner() );
+        System.out.println("Balance: " + getbalance());
+        System.out.println("Interest rate: " + interestrate);
+    }
+
+
+
+
+
+
+
+}
