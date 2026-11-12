@@ -1,0 +1,30 @@
+
+
+public static void main (String [] arg) {
+
+    int number[] = {10, 45, 20, 80, 35, 60};
+ 
+  
+    int greater = number[0];
+    int second = number[0];
+
+
+    for (int i = 0; i < number.length; i++){
+
+        if (number[i] >= greater){
+             second = greater;
+            
+            greater = number[i];          
+        } else if (number[i] < greater && number[i] > second){
+
+            second = number[i];
+            
+        }
+        
+    }
+
+       System.out.println("second largest: " + second);
+       
+
+}
+   
